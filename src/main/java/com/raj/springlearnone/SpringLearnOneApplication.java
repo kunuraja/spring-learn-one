@@ -24,6 +24,7 @@ public class SpringLearnOneApplication {
 		String primaryBeanDemo = primaryController.primaryBeanController();
 		System.out.println(primaryBeanDemo);
 
+
 	}
 
 }
