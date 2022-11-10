@@ -1,11 +1,13 @@
 # spring-learn-one
 Spring core learning
 
-Primary Bean
+Component Scan
 ==============
+By default Spring will scan the components in the package where main application resides.
 
-@Primary annotation is used to make the bean primary. Suppose there is conflicts in the bean and we are not using @Qualifier annotation, then the bean annotated 
-with @Primary will be called by default.
+Now suppose we have placed our services in a different package where main application is not located.
+Then in that case it will throw following error "Field myService in com.raj.springlearnone.controller.
+MyController required a bean of type 'raj.component.scan.MyService' that could not be found"
 
-And we will get the error "Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans,
-or using @Qualifier to identify the bean that should be consumed"
+In order to resolve the error we can use the annotation in the main class.
+    **_@ComponentScan(basePackages = {"com.raj.springlearnone","raj.component.scan"})_**

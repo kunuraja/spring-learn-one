@@ -1,4 +1,4 @@
-package com.raj.springlearnone.service;
+package raj.component.scan;
 
 public interface MyService {
     String getMyService();

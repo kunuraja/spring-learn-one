@@ -1,9 +1,9 @@
 package com.raj.springlearnone.controller;
 
-import com.raj.springlearnone.service.MyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
+import raj.component.scan.MyService;
 
 @Controller
 public class MyController {
@@ -14,7 +14,7 @@ public class MyController {
     @Qualifier("myServiceOneImpl")
     private MyService myService;
 
-    public String demoController(){
+    public String demoController() {
         return myService.getMyService();
     }
 }
