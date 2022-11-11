@@ -1,11 +1,12 @@
 # spring-learn-one
 Spring core learning
 
-Primary Bean
-==============
+Java configuration of stereotype components
+=============================================
 
-@Primary annotation is used to make the bean primary. Suppose there is conflicts in the bean and we are not using @Qualifier annotation, then the bean annotated 
-with @Primary will be called by default.
+We can create java configuration for all stereo type components like @Service, @Primary, @Profile.
 
-And we will get the error "Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans,
-or using @Qualifier to identify the bean that should be consumed"
+For this we can create a java class annotated with @Configuration and create methods for all beans (service class) which will return
+instance of those classes. We need to annotate all those methods will **_@Ban_**
+
+No need to annotate the services with @Service

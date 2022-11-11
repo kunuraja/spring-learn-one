@@ -3,6 +3,7 @@ package com.raj.springlearnone;
 import com.raj.springlearnone.controller.MyController;
 import com.raj.springlearnone.controller.MyControllerTwo;
 import com.raj.springlearnone.controller.PrimaryController;
+import com.raj.springlearnone.controller.ProfileController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -23,6 +24,12 @@ public class SpringLearnOneApplication {
 		PrimaryController primaryController = context.getBean(PrimaryController.class);
 		String primaryBeanDemo = primaryController.primaryBeanController();
 		System.out.println(primaryBeanDemo);
+
+		//============== Profile=======================
+
+		ProfileController profileController = context.getBean(ProfileController.class);
+		String profileDemoJava = profileController.profileDemoJavaConfig();
+		System.out.println("profle demo for java config :" + profileDemoJava);
 
 
 	}
