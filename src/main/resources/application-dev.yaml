@@ -1,0 +1,5 @@
+raj:
+  user:
+    username: Raj-dev
+    password: myPwd-dev
+    dbUrl:    myDBUrl-dev

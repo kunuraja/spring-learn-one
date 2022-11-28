@@ -1,0 +1,5 @@
+raj:
+  user:
+    username: Raj-qa
+    password: myPwd-qa
+    dbUrl:    myDBUrl-qa

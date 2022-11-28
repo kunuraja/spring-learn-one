@@ -1,16 +1,17 @@
 # spring-learn-one
 Spring core learning
 
-Spring profile application properties source
-====================================
+Reading yaml files to bind constructor config
+======================================================
 
-If we dont give **_@PropertySource("classpath:datasource.properties")_** annotation in the config class 
-then by default properties will be picked from application.properties file.
+We can bind constructor config with external .yaml data. 
 
-Now in order to create profiles in application.properties file we need to add "-profileName"
-in to application.properties file as
-application-dev.properties
-application-qa.properties
+For this we need to create one constructor config class (here SpringContructorConfig). Annotate the class with **_@ConstructorBinding and @ConfigurationProperties("raj.user")_**
+Ceate constructor for all the fields and only getters for all fields.
 
-Then we need add the dev or qa profiles to spring.active.profiles= in application.properties
+In SpringConfig class create a bean returning instance of the datasource and pass  SpringContructorConfig as parameter in the 
+method. Use the instance of SpringContructorConfig to get all the properties. Add the annotations **_@Configuration and 
+@EnableConfigurationProperties(SpringConstructorConfig.class)_** at class level.
+
+By default it will read the properties of application.yaml. But we can make active profiles (dev or qa here) by creating application-dev.yaml or application-qa.yaml respectively
 

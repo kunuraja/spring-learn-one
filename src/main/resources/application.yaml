@@ -1,0 +1,12 @@
+raj:
+  user:
+    username: Raj
+    password: myPwd
+    dbUrl:    myDBUrl
+
+spring:
+  profiles:
+    active:
+      - dev
+      - S1
+
